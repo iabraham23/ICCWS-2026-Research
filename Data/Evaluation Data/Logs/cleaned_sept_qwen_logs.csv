@@ -1,0 +1,78 @@
+,scenario_name,disable_scenario_context_file,system_prompt,user_prompt,generated_hint,eduhint_duration
+0,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'apropos rename'}, {'index': 1, 'bashEntry': 'apropos rename'}, {'index': 2, 'bashEntry': 'man ls'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'WELCOME'}, {'index': 1, 'responsesEntry': 'FLAG{WELCOME}'}, {'index': 2, 'responsesEntry': 'FLAG{WELCOME}'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Examine the usage of `ls -a` followed by manual inspection or scripting approach to identify target filenames.|,46.0
+1,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'ls'}, {'index': 1, 'bashEntry': 'pwd'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'how to change read permissions'}, {'index': 1, 'chatEntry': 'how to go to home directory'}, {'index': 2, 'chatEntry': 'how to list hidden files'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '24'}, {'index': 1, 'responsesEntry': '13'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Examine the output of `ls -a` to confirm visibility of hidden files.|,39.47
+2,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'whoami'}, {'index': 1, 'bashEntry': 'pwd'}, {'index': 2, 'bashEntry': 'ls'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'how to change read permissions'}, {'index': 1, 'chatEntry': 'how to go to home directory'}, {'index': 2, 'chatEntry': 'how to list hidden files'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '24'}, {'index': 1, 'responsesEntry': '13'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Review the output of `ls -a` to see all files including hidden ones.|,28.61
+3,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'whoami'}, {'index': 1, 'bashEntry': 'pwd'}, {'index': 2, 'bashEntry': 'ls'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'why is it called chmod'}, {'index': 1, 'chatEntry': 'what do the chmod numbers mean'}, {'index': 2, 'chatEntry': 'how does chmod work'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '24'}, {'index': 1, 'responsesEntry': '13'}, {'index': 2, 'responsesEntry': 'chmod'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.","Review `man` pages specifically focusing on `chmod`, then attempt changing directory visibility.|",28.18
+4,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'whoami'}, {'index': 1, 'bashEntry': 'pwd'}, {'index': 2, 'bashEntry': 'ls'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'how to bake brownies'}, {'index': 1, 'chatEntry': 'how to bake cookies'}, {'index': 2, 'chatEntry': 'how to bake a cake'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '24'}, {'index': 1, 'responsesEntry': '13'}, {'index': 2, 'responsesEntry': 'chmod'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Verify current directory contents by listing all files including hidden ones <|end|>Human resources department of an organization is considering implementing AI chatbots in customer service roles due to the high volume of inquiries received,32.0
+5,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'HEAD you_cant_read_me.txt'}, {'index': 1, 'bashEntry': ' _______  _______  _______  _______  ___  __    _  _______ '}, {'index': 2, 'bashEntry': 'ls'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Verify Permissions: check-file-permissions target_file.xml,23.56
+6,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'cd followMe/keepGOING/another\\ folder\\ wee/im.another.folder/WOOT/dontstop/okYouAreHERE\\!/KLVnvA4l '}, {'index': 1, 'bashEntry': 'cd followMe/keepGOING/another\\ folder\\ wee/im.another.folder/WOOT/dontstop/okYouAreHERE\\!/KLVnvA4l '}, {'index': 2, 'bashEntry': 'cd follow'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'KLVnvA4l'}, {'index': 1, 'responsesEntry': '-v'}, {'index': 2, 'responsesEntry': 'KLVnvA4l '}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Change directory back safely: `cd ..,27.32
+7,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'cat cookie-recipe.txt'}, {'index': 1, 'bashEntry': 'cat cookie-recipe.txt'}, {'index': 2, 'bashEntry': 'cat cake-recipe.txt'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'how to bake brownies'}, {'index': 1, 'chatEntry': 'how to bake cookies'}, {'index': 2, 'chatEntry': 'how to bake a cake'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '24'}, {'index': 1, 'responsesEntry': '13'}, {'index': 2, 'responsesEntry': 'chmod'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Review the content of `cookie-recipe` and consider if it's related or exploitable.|,29.42
+8,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'man ls'}, {'index': 1, 'bashEntry': 'man l'}, {'index': 2, 'bashEntry': '~$ man ls'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'FLAG{WELCOME}'}, {'index': 1, 'responsesEntry': 'welcome'}, {'index': 2, 'responsesEntry': 'WELCOME'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Examine the usage of `less` after manual pages; look into potential red flags in combined searches or unusual directory access.|,25.46
+9,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'man cp'}, {'index': 1, 'bashEntry': 'man ls'}, {'index': 2, 'bashEntry': 'man ls'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': '-v'}, {'index': 1, 'responsesEntry': 'WELCOME'}, {'index': 2, 'responsesEntry': 'FLAG{WELCOME}'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Review the `cp` manual page; consider its usage in conjunction with filtering or redirecting output.|,24.12
+10,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'chmod 813 you_cant_read_me.txt '}, {'index': 1, 'bashEntry': 'whoami'}, {'index': 2, 'bashEntry': 'pwd'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'why is it called chmod'}, {'index': 1, 'chatEntry': 'what do the chmod nnumbers mean'}, {'index': 2, 'chatEntry': 'how does chmod work'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'chmod'}, {'index': 1, 'responsesEntry': 'chmod?'}, {'index': 2, 'responsesEntry': 'mode'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Examine `you_cant Read_me\.,26.73
+11,getting_started,False,"Complete this hint for a cybersecurity student. Based on their recent activity and scenario context, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'chmod 813 you_cant_read_me.txt '}, {'index': 1, 'bashEntry': 'whoami'}, {'index': 2, 'bashEntry': 'pwd'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'why is it called chmod'}, {'index': 1, 'chatEntry': 'what do the chmod nnumbers mean'}, {'index': 2, 'chatEntry': 'how does chmod work'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'chmod'}, {'index': 1, 'responsesEntry': 'chmod?'}, {'index': 2, 'responsesEntry': 'mode'}]
+
+Background scenario context: standing command syntax, file manipulation, and permission settings, using man for command documentation, and composing commands with redirection and filters such as less and sort. They explore options for ls to display hidden files. The student must rename and copy files using mv and cp, adjust file permissions with chmod, and use pattern matching with both regular expressions and glob patterns.",Examine `you_cant Read_me\.,26.48
+12,getting_started,True,"Complete this hint for a cybersecurity student. Based on their recent activity, write EXACTLY ONE specific action they should take next. Start with a verb. Maximum 20 words.","MOST RECENT COMMANDS (analyze these first): [{'index': 0, 'bashEntry': 'chmod 813 you_cant_read_me.txt '}, {'index': 1, 'bashEntry': 'whoami'}, {'index': 2, 'bashEntry': 'pwd'}]
+
+RECENT QUESTIONS/DISCUSSION: [{'index': 0, 'chatEntry': 'why is it called chmod'}, {'index': 1, 'chatEntry': 'what do the chmod nnumbers mean'}, {'index': 2, 'chatEntry': 'how does chmod work'}]
+
+Previous attempts: [{'index': 0, 'responsesEntry': 'chmod'}, {'index': 1, 'responsesEntry': 'chmod?'}, {'index': 2, 'responsesEntry': 'mode'}]",Review and correct permissions; assess file ownership.|,20.83
