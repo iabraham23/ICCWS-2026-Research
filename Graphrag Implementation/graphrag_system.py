@@ -21,6 +21,8 @@ class GraphRAGPipeline:
         self.all_nodes = all_nodes
         self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
         self.entity_llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.0)
+
+        #reference: https://medium.com/neo4j/enhancing-the-accuracy-of-rag-applications-with-knowledge-graphs-ad5e2ffab663   
         class Entities(BaseModel):
             """Identifying information about entities."""
             names: List[str] = Field(
