@@ -1,5 +1,3 @@
-#NON QandA version of the hybrid rag, made to work as a mimic to EDUHints
-
 from dotenv import load_dotenv
 load_dotenv()
 import os 
@@ -36,7 +34,7 @@ graph.refresh_schema()
 s = time.time()
 all_nodes = graph.query("MATCH (n) WHERE n.embedding IS NOT NULL RETURN n.name AS name, n.embedding AS embedding")
 e = time.time()
-print(f"DEBUG graph finished querying: {e-s}") #loading this all_nodes takes a lot of time which we don't want to reload  
+print(f"DEBUG graph finished querying: {e-s}") #loading up front  
 
 llm = LlamaCpp(
     model_path="models/Phi-3-mini-4k-instruct-q4.gguf",
@@ -170,7 +168,6 @@ def query_neo4j(input_dict):
     scored_paths.sort(key=lambda x: x[0], reverse=True) 
     top_paths = [res for _, res in scored_paths[:20]] #ignoring the score 
 
-    #print(f"DEBUG -- entities: {entities} result in {len(top_paths)}: {top_paths}")
     return {"graph_results": top_paths, "bash_commands": input_dict["bash_commands"], "chat_messages": input_dict["chat_messages"]}
 
 
