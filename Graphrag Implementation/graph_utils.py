@@ -112,13 +112,13 @@ def path_signature(path):
 
     signature_parts = [normalize(el) for el in path]
     return "->".join(signature_parts)
+    
 def mean_pool_path(path): #pool the nodes and relationships of a path to come up with a single meaningful vector 
         node_embeddings = []
-        for i in range(0, len(path)): 
-            entity = path[i] #could be node or relationship 
-            if "embedding" in entity and entity["embedding"] is not None:
+        for p in path: #could be node or relationship 
+            if "embedding" in p and p["embedding"] is not None:
                 node_embeddings.append(np.array(entity["embedding"]))
-        if node_embeddings:
+         if node_embeddings:
             return np.mean(node_embeddings, axis=0)
         return None
 
@@ -144,7 +144,7 @@ def format_graph_results(graph_results):
 
 import re, ast
 
-def get_bash_chat_v2(user_prompt: str): #for use with most recent versions of CSV files 
+def get_bash_chat_v2(user_prompt: str):  
     """
     Parse one EDUHints-style sample (single row) and return:
       - bash_commands: list[str]
@@ -163,7 +163,6 @@ def get_bash_chat_v2(user_prompt: str): #for use with most recent versions of CS
         if not m:
             return []
         raw = m.group(1)
-        # literal_eval keeps things strict/safe; return [] on failure
         try:
             return ast.literal_eval(raw)
         except Exception:
@@ -178,13 +177,11 @@ def get_bash_chat_v2(user_prompt: str): #for use with most recent versions of CS
         )
         return (m.group(1).strip() if m else "")
 
-    # exact labels in your sample
     bash_entries    = extract_array("MOST RECENT COMMANDS (analyze these first)")
     chat_entries    = extract_array("RECENT QUESTIONS/DISCUSSION")
     attempt_entries = extract_array("Previous attempts")
     background      = extract_background("Background scenario context")
 
-    # Pull only the value fields, guarding for dict shape
     bash_commands = [e.get("bashEntry")      for e in bash_entries    if isinstance(e, dict) and "bashEntry"      in e]
     chat_messages = [e.get("chatEntry")      for e in chat_entries    if isinstance(e, dict) and "chatEntry"      in e]
     chat_attempts = [e.get("responsesEntry") for e in attempt_entries if isinstance(e, dict) and "responsesEntry" in e]
