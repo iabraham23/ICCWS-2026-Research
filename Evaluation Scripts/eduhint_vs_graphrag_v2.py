@@ -94,7 +94,6 @@ if __name__ == "__main__":
 
     in_path = 'langchain/logs/cleaned_sept_qwen_logs.csv'
     df = get_system_user_prompts(in_path)
-    #df = df[:18] + df[20:]
     
 
     """
@@ -108,6 +107,6 @@ if __name__ == "__main__":
     #however, it should be noted that times won't be a fair comparison as they were generated on a different system
     #we will combat this be regenerating base eduhints, seeing the time difference compared to when they did it, then apply that percent to the rest of the hints
 
-    out = "Data/printing.csv"
+    out = "Data/Evaluation Data/printing.csv"
     compare_with_set_eduhint(df=df, chain=chain, out_path=out)
 
