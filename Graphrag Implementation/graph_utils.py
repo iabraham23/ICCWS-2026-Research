@@ -192,4 +192,34 @@ def get_bash_chat_v2(user_prompt: str):
         "chat_answers": chat_attempts,
         "background": background,
     }
+    
+def fix_labels():
+        conflicting_nodes = graph.query("""
+            MATCH (n)
+    WHERE labels(n) = ["Concept", "Application"] OR labels(n) = ["Application", "Concept"]
+    RETURN n.name AS name, labels(n), n.category AS category
+        """)
+    
+        for node in conflicting_nodes:
+            node["category"] = node["category"].capitalize()
+            label = node["category"]
+            if label not in {"Concept", "Application", "Role"}: 
+                print(f" Skipping node with unexpected category: {node}")
+                continue
+    
+            graph.query(
+                f"""
+                MATCH (n)
+                WHERE toLower(n.name) = toLower($name)
+                REMOVE n:Concept
+                REMOVE n:Application
+                REMOVE n:Role
+                SET n:`{label}`
+                """,
+                params={"name": node["name"]}
+            )
+            print(f"Updated {node['name']} to label: {label}")
+
+
+
 
