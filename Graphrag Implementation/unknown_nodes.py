@@ -33,8 +33,6 @@ def get_unknown_nodes(graph):
     RETURN n.name AS name, n.type AS type, n.category AS category 
     """
     return(graph.query(cypher))
-#print(unknown_nodes) #returns a list of dicts, keys: "name", "type", "category"
-#print(len(unknown_nodes))
 
 #note: we use {{}} to escape the normal variable behavior of {} 
 FEW_SHOT = """
